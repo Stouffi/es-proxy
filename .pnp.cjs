@@ -34,10 +34,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@types/aws4", "npm:1.11.2"],\
+            ["@types/body-parser", "npm:1.19.2"],\
             ["@types/express", "npm:4.17.13"],\
             ["@types/express-http-proxy", "npm:1.6.3"],\
             ["@types/node", "npm:16.11.41"],\
             ["aws4", "npm:1.11.0"],\
+            ["body-parser", "npm:1.20.0"],\
             ["express", "npm:4.18.1"],\
             ["express-http-proxy", "npm:1.6.3"],\
             ["typescript", "patch:typescript@npm%3A4.7.3#~builtin<compat/typescript>::version=4.7.3&hash=7ad353"]\
@@ -358,10 +360,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["es-proxy", "workspace:."],\
             ["@types/aws4", "npm:1.11.2"],\
+            ["@types/body-parser", "npm:1.19.2"],\
             ["@types/express", "npm:4.17.13"],\
             ["@types/express-http-proxy", "npm:1.6.3"],\
             ["@types/node", "npm:16.11.41"],\
             ["aws4", "npm:1.11.0"],\
+            ["body-parser", "npm:1.20.0"],\
             ["express", "npm:4.18.1"],\
             ["express-http-proxy", "npm:1.6.3"],\
             ["typescript", "patch:typescript@npm%3A4.7.3#~builtin<compat/typescript>::version=4.7.3&hash=7ad353"]\

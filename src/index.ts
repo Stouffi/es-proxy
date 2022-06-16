@@ -1,12 +1,15 @@
 import proxy from "express-http-proxy";
 import exp from "express";
 import aws4 from "aws4";
+import bodyParser from "body-parser";
 
 const app = exp();
 
 const esUrl = process.env["ES_URL"]!;
 const accessKeyId = process.env["AWS_ACCESS_KEY_ID"];
 const secretAccessKey = process.env["AWS_SECRET_ACCESS_KEY"];
+
+app.use(bodyParser.json())
 
 app.use(
   proxy(esUrl, {
