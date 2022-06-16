@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/aws4", "npm:1.11.2"],\
             ["@types/express", "npm:4.17.13"],\
             ["@types/express-http-proxy", "npm:1.6.3"],\
+            ["@types/node", "npm:16.11.41"],\
             ["aws4", "npm:1.11.0"],\
             ["express", "npm:4.18.1"],\
             ["express-http-proxy", "npm:1.6.3"],\
@@ -120,6 +121,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
+        ["npm:16.11.41", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.41-e10b7bd53b-808e4d6575.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:16.11.41"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:18.0.0", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-18.0.0-c8497066c5-aab2b32572.zip/node_modules/@types/node/",\
           "packageDependencies": [\
@@ -352,6 +360,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/aws4", "npm:1.11.2"],\
             ["@types/express", "npm:4.17.13"],\
             ["@types/express-http-proxy", "npm:1.6.3"],\
+            ["@types/node", "npm:16.11.41"],\
             ["aws4", "npm:1.11.0"],\
             ["express", "npm:4.18.1"],\
             ["express-http-proxy", "npm:1.6.3"],\
