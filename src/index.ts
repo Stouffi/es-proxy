@@ -9,7 +9,9 @@ const accessKeyId = process.env['AWS_ACCESS_KEY_ID']
 const secretAccessKey = process.env['AWS_SECRET_ACCESS_KEY']
 
 app.use(proxy(esUrl, {proxyReqOptDecorator(reqOpts, srcReq) {
+    console.log('REQ OPTS', reqOpts)
     aws4.sign(reqOpts as aws4.Request, {accessKeyId, secretAccessKey})
+    console.log('AFTER', reqOpts)
     return reqOpts
 },}));
 
