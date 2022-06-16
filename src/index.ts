@@ -12,3 +12,7 @@ app.use('/*', proxy(esUrl, {proxyReqOptDecorator(_, srcReq) {
     aws4.sign(srcReq, {accessKeyId, secretAccessKey})
     return srcReq
 },}));
+
+app.listen(process.env['PORT'], () => {
+    console.log('proxy started')
+})
