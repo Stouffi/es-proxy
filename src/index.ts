@@ -9,9 +9,8 @@ const esUrl = process.env["ES_URL"]!;
 const accessKeyId = process.env["AWS_ACCESS_KEY_ID"];
 const secretAccessKey = process.env["AWS_SECRET_ACCESS_KEY"];
 
-app.use(bodyParser.raw())
 
-app.use(
+app.use(bodyParser.raw(),
   proxy(esUrl, {
     proxyReqOptDecorator(reqOpts, request) {
       const headers = reqOpts.headers ?? {};
