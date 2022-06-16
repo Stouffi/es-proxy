@@ -12,7 +12,7 @@ app.use(
   proxy(esUrl, {
     proxyReqOptDecorator(reqOpts, request) {
       const headers = reqOpts.headers ?? {};
-      const { ["Content-Type"]: contentType, Date: dateHeader } = headers;
+      const { ["content-type"]: contentType, date: dateHeader } = headers;
       const reqOptions: aws4.Request = {
         host: reqOpts.host ?? undefined,
         method: reqOpts.method,
