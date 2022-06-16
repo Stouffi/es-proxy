@@ -18,7 +18,10 @@ app.use(
         method: reqOpts.method,
         path: reqOpts.path ?? undefined,
         body: request.body,
-        headers: { "Content-Type": contentType, Date: dateHeader },
+        headers: Object.assign(
+          contentType ? { "Content-Type": contentType } : {},
+          dateHeader ? { Date: dateHeader } : {}
+        ),
       };
       console.log("REQ OPTS", reqOpts.headers, reqOptions);
       aws4.sign(reqOptions, { accessKeyId, secretAccessKey });
