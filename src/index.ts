@@ -18,7 +18,7 @@ app.use(
         host: reqOpts.host ?? undefined,
         method: reqOpts.method,
         path: reqOpts.path ?? undefined,
-        body: request.body,
+        body: request.body instanceof Buffer ? request.body : undefined,
         headers: Object.assign(
           contentType ? { "Content-Type": contentType } : {},
           dateHeader ? { Date: dateHeader } : {}
