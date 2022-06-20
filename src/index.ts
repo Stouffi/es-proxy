@@ -39,7 +39,7 @@ app.use(
     // },
     proxyReqOptDecorator(reqOpts, request) {
       
-      aws4.sign(reqOpts as any, { accessKeyId, secretAccessKey });
+      aws4.sign({host: reqOpts.host!}, { accessKeyId, secretAccessKey });
       // console.log("AFTER", reqOptions);
       return reqOpts;
     },
