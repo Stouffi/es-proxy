@@ -38,9 +38,16 @@ app.use(
     //   return reqOptions;
     // },
     proxyReqOptDecorator(reqOpts, request) {
-      
       console.log("BEFORE", reqOpts);
-      const res = aws4.sign({host: reqOpts.host!, path: reqOpts.path!, headers: {}, body: request.body}, { accessKeyId, secretAccessKey });
+      const res = aws4.sign(
+        {
+          host: reqOpts.host!,
+          path: reqOpts.path!,
+          headers: {},
+          body: request.body instanceof Buffer ? request.body : '',
+        },
+        { accessKeyId, secretAccessKey }
+      );
       console.log("AFTER", res);
       return res;
     },
