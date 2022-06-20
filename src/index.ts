@@ -51,6 +51,9 @@ app.use(
       console.log("AFTER", res);
       return res;
     },
+    proxyReqBodyDecorator(body) {
+      return body instanceof Buffer ? body : ''
+    }
   })
 );
 
